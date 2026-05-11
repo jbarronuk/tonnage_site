@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News — TONNAGE</title>
+  <meta name="description" content="Industry updates and legislation news around digital waste transfer notes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e0d0b;
+      --fg: #f3ede0;
+      --muted: #6c655a;
+      --accent: #d97a2c;
+      --border: #1e1d1a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    header, main, footer { position: relative; z-index: 2; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 0.65rem;
+      vertical-align: middle;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.22em;
+    }
+
+    header a:hover { color: var(--fg); }
+
+    header nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    header nav a.active { color: var(--fg); }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50%       { opacity: 1;    transform: scale(1.2); }
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 2.5rem;
+      max-width: 860px;
+    }
+
+    .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .page-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 144, 'SOFT' 100;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin-bottom: 3rem;
+    }
+
+    .page-title .dot-end { color: var(--accent); }
+
+    .post-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .post-item {
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: start;
+      animation: fadeUp 0.6s ease-out both;
+    }
+
+    .post-item:nth-child(1) { animation-delay: 0.05s; }
+    .post-item:nth-child(2) { animation-delay: 0.1s; }
+    .post-item:nth-child(3) { animation-delay: 0.15s; }
+    .post-item:nth-child(4) { animation-delay: 0.2s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(0.4rem); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .post-meta {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .post-category {
+      color: var(--accent);
+      margin-right: 1.2rem;
+    }
+
+    .post-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.65rem;
+    }
+
+    .post-title a {
+      color: var(--fg);
+      text-decoration: none;
+    }
+
+    .post-title a:hover { color: var(--accent); }
+
+    .post-excerpt {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--fg);
+      opacity: 0.6;
+
+    }
+
+    .post-arrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      padding-top: 0.2rem;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .post-arrow:hover { color: var(--accent); }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      gap: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .domains {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      header, main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      main { padding-top: 2.5rem; }
+      header nav { gap: 1.2rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .domains { text-align: left; }
+      .post-item { grid-template-columns: 1fr; }
+      .post-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/"><span class="dot"></span>Tonnage</a>
+    <nav>
+      <a href="/news/" class="active">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="page-label">Industry Updates</p>
+    <h1 class="page-title">news<span class="dot-end">.</span></h1>
+
+    <ul class="post-list">
+
+      <li class="post-item">
+        <div>
+          <p class="post-meta">
+            <span class="post-category">Legislation</span>
+            <span>11 May 2026</span>
+          </p>
+          <h2 class="post-title">
+            <a href="/news/man-with-a-van-fine-what-small-waste-carriers-need-to-know/">The "man with a van" case every small waste carrier should be talking about</a>
+          </h2>
+          <p class="post-excerpt">A &pound;600 fine in the West Midlands shows how duty of care is being enforced — and why the move to digital waste transfer notes matters for small carriers preparing for the October 2027 mandate.</p>
+        </div>
+        <a class="post-arrow" href="/news/man-with-a-van-fine-what-small-waste-carriers-need-to-know/">Read →</a>
+      </li>
+
+    </ul>
+  </main>
+
+  <footer>
+    <span>© 2025 Tonnage</span>
+    <div class="domains">
+      <span>mytonnage.co.uk &middot; mytonnage.com</span>
+    </div>
+  </footer>
+
+</body>
+</html>
