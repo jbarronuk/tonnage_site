@@ -53,8 +53,9 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--muted);
+      border-bottom: 1px solid var(--border);
     }
- 
+
     header .dot {
       display: inline-block;
       width: 6px;
@@ -65,6 +66,22 @@
       vertical-align: middle;
       animation: pulse 2.4s ease-in-out infinite;
     }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.22em;
+    }
+
+    header a:hover { color: var(--fg); }
+
+    header nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    header nav a.active { color: var(--fg); }
  
     @keyframes pulse {
       0%, 100% { opacity: 0.35; transform: scale(1); }
