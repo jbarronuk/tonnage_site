@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free UK Waste Transfer Note Template (PDF & Word) — Tonnage</title>
+  <meta name="description" content="Download a free, legally-compliant UK Waste Transfer Note template. PDF and editable Word formats. Built to the Waste (England and Wales) Regulations 2011 and Duty of Care Code of Practice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e0d0b;
+      --fg: #f3ede0;
+      --muted: #6c655a;
+      --accent: #d97a2c;
+      --border: #1e1d1a;
+      --panel: #15140f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { min-height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    header, main, footer { position: relative; z-index: 2; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.22em;
+    }
+
+    header a:hover, header a.active { color: var(--fg); }
+
+    header .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 0.65rem;
+      vertical-align: middle;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    header nav { display: flex; gap: 2rem; align-items: center; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50%       { opacity: 1;    transform: scale(1.2); }
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 2.5rem;
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .meta {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    .meta .category { color: var(--accent); }
+
+    .back-link {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+    }
+
+    .back-link:hover { color: var(--fg); }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 144, 'SOFT' 100;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+      animation: settle 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .lede {
+      font-size: 1rem;
+      line-height: 1.7;
+      opacity: 0.85;
+      max-width: 640px;
+      margin-bottom: 3rem;
+      animation: fadeUp 0.9s 0.2s ease-out both;
+    }
+
+    @keyframes settle {
+      0%   { transform: translateY(-0.5rem); opacity: 0; }
+      100% { transform: translateY(0);       opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0;    transform: translateY(0.4rem); }
+      to   { opacity: 0.85; transform: translateY(0); }
+    }
+
+    /* Download panel */
+    .downloads {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      animation: fadeUp 0.9s 0.4s ease-out both;
+    }
+
+    .download {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.75rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--fg);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 180px;
+    }
+
+    .download::after {
+      content: '↓';
+      position: absolute;
+      bottom: 1.25rem;
+      right: 1.5rem;
+      font-size: 1.3rem;
+      color: var(--muted);
+      transition: color 0.2s ease, transform 0.25s ease;
+    }
+
+    .download:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .download:hover::after { color: var(--accent); transform: translateY(3px); }
+
+    .download.primary { border-color: var(--accent); }
+    .download.primary::after { color: var(--accent); }
+
+    .download .label {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .download .format {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .download .desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 80%;
+    }
+
+    .download .size {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    /* Section style */
+    section {
+      margin-bottom: 3.5rem;
+      font-size: 0.88rem;
+      line-height: 1.85;
+    }
+
+    section h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    section p { margin-bottom: 1.1rem; opacity: 0.85; }
+
+    section ul { list-style: none; opacity: 0.85; }
+
+    section ul li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Two-column "included" grid */
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+
+    .included-grid .item {
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .included-grid .item .num {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .included-grid .item .title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+
+    .included-grid .item .desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Hazardous warning callout */
+    .callout {
+      border-left: 2px solid var(--accent);
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      margin: 2rem 0;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .callout strong { color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.3rem; }
+
+    /* FAQ */
+    .faq details {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 0;
+    }
+
+    .faq details:last-of-type { border-bottom: 1px solid var(--border); }
+
+    .faq summary {
+      cursor: pointer;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1.3rem;
+      transition: transform 0.2s ease;
+    }
+
+    .faq details[open] summary::after { content: '−'; }
+
+    .faq details p {
+      margin-top: 0.9rem;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3.5rem 0;
+    }
+
+    .small-print {
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      line-height: 1.7;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      gap: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .domains { display: flex; flex-direction: column; gap: 0.3rem; text-align: right; }
+
+    @media (max-width: 640px) {
+      header, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      main { padding: 2.5rem 1.5rem; }
+      header nav { gap: 1.2rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .domains { text-align: left; }
+      .downloads { grid-template-columns: 1fr; }
+      .included-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/"><span class="dot"></span>Tonnage</a>
+    <nav>
+      <a href="/waste-transfer-note-template/" class="active">Template</a>
+      <a href="/news/">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="meta">
+      <span class="category">Free Download</span>
+      <span>Updated May 2026</span>
+      <span>PDF &middot; Word</span>
+    </div>
+
+    <h1>The UK Waste Transfer Note, done properly.</h1>
+
+    <p class="lede">
+      A complete, legally-compliant Waste Transfer Note template built to the Waste (England and Wales) Regulations 2011 and the Duty of Care Code of Practice. Print it, sign it, keep it for two years. No email signup, no watermark, no catch.
+    </p>
+
+    <div class="downloads">
+      <a class="download primary" href="/files/waste-transfer-note.pdf" download>
+        <div>
+          <div class="label">Recommended</div>
+          <div class="format">PDF</div>
+          <div class="desc">Ready to print and complete by hand. Same on every device.</div>
+        </div>
+        <div class="size">A4 &middot; 4 pages</div>
+      </a>
+
+      <a class="download" href="/files/waste-transfer-note.docx" download>
+        <div>
+          <div class="label">Editable</div>
+          <div class="format">Word</div>
+          <div class="desc">Add your logo, pre-fill your details, save your own version.</div>
+        </div>
+        <div class="size">.docx &middot; Microsoft Word</div>
+      </a>
+    </div>
+
+    <section>
+      <h2>What's in the template</h2>
+      <p>
+        Most free templates floating around online are missing fields the regulations actually require. This one isn't. Every duty-of-care obligation under Section 34 of the Environmental Protection Act 1990 and Regulation 35 of the Waste (England and Wales) Regulations 2011 is covered.
+      </p>
+
+      <div class="included-grid">
+        <div class="item">
+          <div class="num">01</div>
+          <div class="title">Waste description + EWC code</div>
+          <div class="desc">Specific description fields, six-digit List of Wastes code, containment, quantity and unit. Plus a hard stop if the waste is hazardous.</div>
+        </div>
+        <div class="item">
+          <div class="num">02</div>
+          <div class="title">Transferor + transferee details</div>
+          <div class="desc">Full identity, addresses, SIC code, permits, exemptions, CBDU registration. Tickboxes for every capacity.</div>
+        </div>
+        <div class="item">
+          <div class="num">03</div>
+          <div class="title">Transfer details</div>
+          <div class="desc">Collection address, date, time, vehicle reg, destination facility, broker or dealer info, and season-ticket support for repeat collections.</div>
+        </div>
+        <div class="item">
+          <div class="num">04</div>
+          <div class="title">Declarations + signatures</div>
+          <div class="desc">Separate transferor and transferee declarations covering waste classification, authorisation and the waste hierarchy under Regulation 12.</div>
+        </div>
+        <div class="item">
+          <div class="num">05</div>
+          <div class="title">Common EWC codes</div>
+          <div class="desc">A built-in quick-reference table of the 20 codes you'll actually use, so you don't need to dig through Commission Decision 2000/532/EC.</div>
+        </div>
+        <div class="item">
+          <div class="num">06</div>
+          <div class="title">UK GDPR + compliance notes</div>
+          <div class="desc">Data protection wording, retention rules, regulator references for England (EA) and Wales (NRW), and 2026 Digital Waste Tracking notes.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="callout">
+      <strong>Hazardous waste?</strong>
+      Batteries, fluorescent tubes, WEEE, solvents, oils, asbestos, clinical waste and anything classified as hazardous can't be transferred on this note. You need a Hazardous Waste Consignment Note instead, with pre-notification where applicable.
+    </div>
+
+    <hr class="divider" />
+
+    <section class="faq">
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>Is this template legally valid?</summary>
+        <p>Yes. It contains every field required under Section 34 of the Environmental Protection Act 1990, Regulation 35 of the Waste (England and Wales) Regulations 2011, and the statutory Duty of Care Code of Practice. It mirrors the structure of the official GOV.UK template with additional fields for SIC codes, vehicle registration, and signatures, which is good practice but optional.</p>
+      </details>
+
+      <details>
+        <summary>How long do I have to keep it?</summary>
+        <p>Two years from the date of transfer for non-hazardous waste; three years for hazardous waste consignment notes. You must produce it within seven days of a request by the Environment Agency, Natural Resources Wales, or your local authority.</p>
+      </details>
+
+      <details>
+        <summary>Does this work in Wales as well as England?</summary>
+        <p>Yes. The Waste (England and Wales) Regulations 2011 apply equally in both jurisdictions. The template references both the Environment Agency and Natural Resources Wales throughout. Scotland (SEPA) and Northern Ireland (NIEA) have separate rules and this template is not designed for those territories.</p>
+      </details>
+
+      <details>
+        <summary>Do I still need this when Digital Waste Tracking starts?</summary>
+        <p>For now, yes. DEFRA's mandatory Digital Waste Tracking service rolls out in phases — receiving facilities from October 2026, carriers, brokers and dealers from April 2027. Until then, paper or PDF notes remain valid. Electronic signatures are recognised under the Electronic Communications Act 2000.</p>
+      </details>
+
+      <details>
+        <summary>Can I add my company branding?</summary>
+        <p>Yes — the Word version is fully editable. Add your logo, pre-fill your company details, change colours, save it as your standard template. The PDF version is for print-and-fill use.</p>
+      </details>
+
+      <details>
+        <summary>What's a 'season ticket' and when can I use one?</summary>
+        <p>A single WTN can cover multiple transfers of the same waste, by the same carrier, from the same address, for up to twelve months — as long as nothing else changes. You keep a schedule of each collection (date, time, quantity) alongside the note. If the waste, parties, or address change, you need a new note.</p>
+      </details>
+    </section>
+
+    <hr class="divider" />
+
+    <p class="small-print">
+      This template is provided free of charge for general guidance and reflects the requirements of the Waste (England and Wales) Regulations 2011 and the statutory Duty of Care Code of Practice. It is not a substitute for legal advice. Always verify current requirements with the Environment Agency or Natural Resources Wales.
+    </p>
+  </main>
+
+  <footer>
+    <span>© 2026 Tonnage</span>
+    <div class="domains">
+      <span>mytonnage.co.uk &middot; mytonnage.com</span>
+    </div>
+  </footer>
+
+</body>
+</html>

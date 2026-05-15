@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The "man with a van" case every small waste carrier should be talking about — TONNAGE</title>
+  <meta name="description" content="A £600 fine in the West Midlands shows how duty of care is being enforced — and why the move to digital waste transfer notes matters for small carriers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e0d0b;
+      --fg: #f3ede0;
+      --muted: #6c655a;
+      --accent: #d97a2c;
+      --border: #1e1d1a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    header, main, footer { position: relative; z-index: 2; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.22em;
+    }
+
+    header a:hover { color: var(--fg); }
+
+    header .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 0.65rem;
+      vertical-align: middle;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    header nav { display: flex; gap: 2rem; align-items: center; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50%       { opacity: 1;    transform: scale(1.2); }
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 2.5rem;
+    }
+
+    .article-meta {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    .article-category { color: var(--accent); }
+
+    .article-back {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+    }
+
+    .article-back:hover { color: var(--fg); }
+
+    .article-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 144, 'SOFT' 100;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      margin-bottom: 2.5rem;
+      animation: settle 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    @keyframes settle {
+      0%   { transform: translateY(-0.5rem); opacity: 0; }
+      100% { transform: translateY(0);       opacity: 1; }
+    }
+
+    .article-body {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0;    transform: translateY(0.4rem); }
+      to   { opacity: 0.85; transform: translateY(0); }
+    }
+
+    .article-body p {
+      margin-bottom: 1.4rem;
+    }
+
+    .article-body h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: 'opsz' 72, 'SOFT' 100;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      opacity: 1;
+      margin: 2.5rem 0 0.9rem;
+    }
+
+    .article-body ul {
+      list-style: none;
+      margin-bottom: 1.4rem;
+    }
+
+    .article-body ul li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-body ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .article-body blockquote {
+      border-left: 2px solid var(--accent);
+      padding-left: 1.2rem;
+      margin: 1.8rem 0;
+      opacity: 0.75;
+      font-style: italic;
+    }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .article-footer {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      max-width: 680px;
+      margin: auto;
+      text-align: center;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 1.75rem 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      gap: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .domains { display: flex; flex-direction: column; gap: 0.3rem; text-align: right; }
+
+    @media (max-width: 640px) {
+      header, main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      main { padding-top: 2.5rem; }
+      header nav { gap: 1.2rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .domains { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/"><span class="dot"></span>Tonnage</a>
+    <nav>
+      <a href="/news/" class="active">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <a class="article-back" href="/news/">← Back to News</a>
+
+      <div class="article-meta">
+        <span class="article-category">Legislation</span>
+        <span>11 May 2026</span>
+        <span>6 min read</span>
+      </div>
+
+      <h1 class="article-title">Header</h1>
+
+      <div class="article-body">
+        <p>Test</p>
+
+        <ul>
+          <li>Point 1</li>
+          <li>Point 2</li>
+          <li>Point 3</li>
+        </ul>
+
+
+        <hr class="article-divider" />
+
+        <p class="article-footer">This article is for informational purposes and does not constitute legal advice. Always consult the Environment Agency's official guidance or a qualified waste compliance adviser for your specific situation.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 Tonnage</span>
+    <div class="domains">
+      <span>mytonnage.co.uk &middot; mytonnage.com</span>
+    </div>
+  </footer>
+
+</body>
+</html>
